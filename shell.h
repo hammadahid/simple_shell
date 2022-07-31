@@ -10,7 +10,7 @@
 #define SH_TOK " "
 int _putchar(char c);
 void _puts(char *str);
-char *sh_read();
+char *sh_readline();
 char **sh_parse(char *line);
 int sh_execute(char **args);
 void sh_loopp(void);
