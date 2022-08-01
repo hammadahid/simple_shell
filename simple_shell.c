@@ -63,6 +63,16 @@ char **sh_parse(char *str)
    return (arg);
 }
 
+int sh_execute(char **args)
+{
+    int position = 0;
+    pid_t cpid;
+    cpid = fork();
+    if (cpid == 0)
+    {
+        execve(args[position], args, NULL);
+    }
+}
 /**
  * sh_loop - main loop of the program
  * Return: void
